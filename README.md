@@ -20,7 +20,7 @@ An example for the BETAFPV-F3 is listed below. Be sure to compile in release mod
     let mut tx = bit_bang_serial::Tx::new(out, baud, time_adjustment);
 
     loop {
-        tx.write(&mut delay, [true, true, true, true, false, true, true, false]);
+        tx.write(&mut delay, "Testing..".as_bytes());
         delay.delay_ms(5u32);
     }
 ```
